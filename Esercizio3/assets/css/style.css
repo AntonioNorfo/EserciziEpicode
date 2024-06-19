@@ -1,0 +1,49 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  display: inline-block;
+}
+.centrale {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.centrale video {
+  width: 100%;
+  border-radius: 10px;
+
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.logo {
+  text-align: center;
+  width: 150px;
+  margin-bottom: 10px;
+}
+span {
+  font-weight: 900;
+}
+div h1 {
+  color: #004d4c;
+  font-size: small;
+}
+.giallo {
+  background-color: #fdfbf1;
+  padding: 0.3%;
+  border-top: 2px #ffd977;
+}
+.colore {
+  color: #333333;
+}
+.colore1 {
+  color: #999999;
+}
+.colore3 {
+  color: #b5460f;
+}
+.focaccia {
+  border-radius: 3%;
+}
+.bordoSinitra {
+  border-left-color: #ffd977;
+  border: 2px;
+}
