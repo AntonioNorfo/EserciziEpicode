@@ -95,7 +95,7 @@ const starWarsCharacters = [
     mass: 77,
     hair_color: "auburn, white",
     skin_color: "fair",
-    eye_color: "blueGray",
+    eye_color: "blue-Gray",
     birth_year: "57BBY",
     gender: "male",
   },
@@ -139,7 +139,7 @@ const eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  blueGray: [],
+  "blue-Gray": [],
 };
 console.log(eyeColor);
 /* ESERCIZIO 5
