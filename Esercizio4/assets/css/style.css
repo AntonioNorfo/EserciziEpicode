@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 20px;
+  background-image: url(../img/sfondo.png);
+  font-family: "Poppins", sans-serif;
+}
+header {
+  background: linear-gradient(to bottom, #01a3c6, #006d88);
+  margin: 0 auto;
+  padding-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-shadow: 2px 2px 4px 1px black;
+}
+header img {
+  width: 300px;
+}
+header ul {
+  padding-bottom: 40px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+li a:hover {
+  color: red;
+}
+
+main {
+  background-color: #ffffff;
+  margin-top: 30px;
+  padding: 10px 15px;
+  text-align: left;
+  box-shadow: 2px 2px 4px 1px black;
+}
+h1 {
+  font-weight: normal;
+  font-size: 2em;
+}
+.grigio {
+  color: #a2a0a3;
+}
+strong {
+  color: #aa2072;
+}
+span {
+  background-color: #e5e1e3;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 8px;
+}
+h2 {
+  font-size: medium;
+  font-style: oblique;
+}
+.coloreGrigio {
+  background-color: #efefef;
+  padding: 10px 15px;
+}
+.sfondoPuntini {
+  background-color: #3469c5;
+  color: #ffffff;
+  font-style: normal;
+}
+th {
+  text-align: center;
+  padding-top: 30px;
+}
+table {
+  border-bottom: 3px solid #4b79cf;
+  text-align: center;
+}
+iframe {
+  border-radius: 10%;
+}
+button {
+  background-color: #3469c5;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+}
+.spazio {
+  margin-bottom: 30px;
+  padding: 10 15px;
+  background-color: #efefef;
+  border-style: solid;
+  border-width: 0.5px;
+  padding-left: 20px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+.destra {
+  text-align: right;
+}
+p a {
+  color: #009bc4;
+  font-weight: bold;
+}
+.sfondo2 {
+  padding: 50px;
+  background: linear-gradient(to bottom, #025467, #2b3438);
+  color: #ffffff;
+  text-align: center;
+}
+.viola {
+  color: #ff00fe;
+}
+input {
+  border-style: dashed;
+  border-bottom: 3px solid #4b79cf;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
