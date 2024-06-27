@@ -23,9 +23,19 @@ const extractNumber = () => {
 
   extractedNumbers.push(newNumber);
   document.getElementById("extractedNumber").innerText = newNumber;
-  document.getElementById("newNumber").classList.add("extractedNumber");
+  colorCell(newNumber);
 };
 
 document.getElementById("extractButton").addEventListener("click", extractNumber);
 
 createTable();
+
+function colorCell(number) {
+  const cells = document.querySelectorAll(".casellaTable");
+  console.log(cells);
+  cells.forEach((cell) => {
+    if (cell.innerText == number) {
+      cell.classList.add("cellColor");
+    }
+  });
+}

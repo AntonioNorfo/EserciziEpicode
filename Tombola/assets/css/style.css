@@ -44,6 +44,7 @@ h1 {
   font-size: 24px;
   font-weight: 700;
   font-size: 3rem;
+  background-color: rgba(18, 2, 241, 0.781);
 }
 #extractButton {
   margin-top: 20px;
@@ -52,4 +53,7 @@ h1 {
   padding: 5px;
   font-weight: 700;
   border-radius: 30px;
+}
+.cellColor {
+  background-color: rgba(18, 2, 241, 0.781);
 }
