@@ -35,3 +35,6 @@ input {
   border: none;
   cursor: pointer;
 }
+.selected {
+  text-decoration: line-through;
+}

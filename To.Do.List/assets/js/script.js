@@ -3,7 +3,6 @@ const btnButton = document.getElementById("btnButton");
 const listP = document.getElementById("listP");
 const newLabel = [];
 btnButton.addEventListener("click", () => {
-  //  e.preventDefault();
   itemsNewLabel();
 });
 function itemsNewLabel() {
@@ -17,6 +16,9 @@ function printListP() {
   listP.innerHTML = " ";
   for (let i = 0; i < newLabel.length; i++) {
     let componentNewLabel = document.createElement("p");
+    componentNewLabel.addEventListener("click", (e) => {
+      e.currentTarget.classList.toggle("selected");
+    });
     componentNewLabel.innerText = newLabel[i];
     let btnDelete = document.createElement("button");
     btnDelete.addEventListener("click", () => {
