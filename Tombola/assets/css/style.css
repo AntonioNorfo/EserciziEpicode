@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  background-image: url("https://get.wallhere.com/photo/illustration-digital-art-abstract-red-branch-pattern-Christmas-Tree-circle-Christmas-snowflakes-tree-flower-petal-christmas-decoration-font-164742.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main {
+  width: 100%;
+  border: 2px solid black;
+  background-image: url("https://img.freepik.com/vettori-gratuito/natale-sfondo-rosso-con-palline_1048-66.jpg?t=st=1719496993~exp=1719500593~hmac=331ed1da10a5306902d608cd06a00dae26f588a83ac098d1e502aeeb92436a5e&w=740");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container {
+  padding: 50px;
+  width: 70%;
+  margin: 0 auto;
+}
+h1 {
+  border: 2px solid black;
+  font-size: 4rem;
+  padding: 30px;
+}
+.casellaTable {
+  width: 8%;
+  height: 80px;
+  border: 2px solid black;
+  display: inline-block;
+  line-height: 50px;
+  padding: 4px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+#extractedNumber {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+#extractButton {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 2rem;
+  padding: 5px;
+  font-weight: 700;
+  border-radius: 30px;
+}
