@@ -88,7 +88,7 @@ const movies = [
   },
   {
     Title: "The Avengers",
-    Year: "2012",
+    Year: "1289",
     imdbID: "tt0848228",
     Type: "movie",
     Poster:
@@ -96,7 +96,7 @@ const movies = [
   },
   {
     Title: "Avengers: Infinity War",
-    Year: "2018",
+    Year: "1356",
     imdbID: "tt4154756",
     Type: "movie",
     Poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
@@ -412,7 +412,7 @@ function newestMovie(movies) {
   let mostRecent = movies[0];
 
   for (let i = 1; i < movies.length; i++) {
-    if (movies[i].year > mostRecent.year) {
+    if (movies[i].Year > mostRecent.Year) {
       mostRecent = movies[i];
     }
   }
@@ -425,21 +425,66 @@ console.log("Il film più recente è:", recentMovie);
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+function countMovies(number) {
+  return movies.length;
+}
+console.log("Numero di film:", countMovies(movies));
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+function onlyTheYears(movies) {
+  let yearsMovie = [];
+  for (let i = 0; i < movies.length; i++) {
+    yearsMovie.push(movies[i].Year);
+  }
+  return yearsMovie;
+}
+console.log(onlyTheYears(movies));
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+function onlyInLastMillennium(movies) {
+  let lastMoviesLastMillenium = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Year < 1999 && movies[i].Year > 1000) {
+      lastMoviesLastMillenium.push(movies[i]);
+    }
+  }
+  return lastMoviesLastMillenium;
+}
+console.log("Film del millennio scorso:", onlyInLastMillennium(movies));
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+function sumAllTheYears(movies) {
+  let sumFilms = 0;
+  for (let i = 0; i < movies.length; i++) {
+    let year = parseInt(movies[i].Year);
+    sumFilms += year;
+  }
+  return sumFilms;
+}
+console.log("La somma degli anni dei vari film e': ", sumAllTheYears(movies));
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+function searchByTitle(stringa) {
+  let movieWithString = [];
+  for (let i = 0; i < movies.length; i++) {
+    // Utilizz to lowercase per rendere imparziale il confronto , se tutto e' piccolo o Uppercase andiamo a vedere se effettivamente quella stringa c e anche se non hanno maiuscole e minuscole = .
+    if (movies[i].Title.toLowerCase().includes(stringa.toLowerCase())) {
+      movieWithString.push(movies[i]);
+    }
+  }
+  return movieWithString;
+}
+console.log("i film contententi la stringa sono : ", searchByTitle("Lord"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
