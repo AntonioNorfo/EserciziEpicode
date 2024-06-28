@@ -407,7 +407,6 @@ function newestMovie(movies) {
   if (movies.length === 0) {
     return null;
   }
-
   let mostRecent = movies[0];
 
   for (let i = 1; i < movies.length; i++) {
@@ -515,7 +514,7 @@ function removeIndex(array, index) {
     // Se l'indice è fuori dai limiti, restituisci l'array originale (senza modifiche)
     return array;
   } else {
-    // Restituisci l'array con l'elemento all'indice specificato rimosso
+    // Restituisco l'array con l'elemento all'indice specificato rimosso
     return array.filter((_, i) => i !== index);
   }
 }
@@ -592,10 +591,7 @@ clearList();
 
 function addClassToRig() {
   let rig = document.querySelectorAll("tr");
-
-  // Itera attraverso ogni elemento <tr> trovato
   rig.forEach(function (rig) {
-    // Aggiungi la classe CSS "test" a ciascun elemento <tr>
     rig.classList.add("test");
   });
 }
@@ -623,11 +619,9 @@ function halfTree(height) {
     for (let j = 0; j < i; j++) {
       line += "*";
     }
-    // Stampa la riga corrente
     console.log(line);
   }
 }
-// Esempi di utilizzo della funzione halfTree
 halfTree(3);
 
 /* ESERCIZIO 28
@@ -654,12 +648,8 @@ function tree(height) {
     console.log(line);
   }
 }
-
-// Esempio di utilizzo della funzione tree con altezza 3
 tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
