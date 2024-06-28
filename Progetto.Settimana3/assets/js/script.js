@@ -88,7 +88,7 @@ const movies = [
   },
   {
     Title: "The Avengers",
-    Year: "1289",
+    Year: "1289", // anno cambiato per testare la funzione sotto
     imdbID: "tt0848228",
     Type: "movie",
     Poster:
@@ -96,7 +96,7 @@ const movies = [
   },
   {
     Title: "Avengers: Infinity War",
-    Year: "1356",
+    Year: "1356", // anno cambiato per testare la funzione sotto
     imdbID: "tt4154756",
     Type: "movie",
     Poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
@@ -389,7 +389,6 @@ function deleteProp(obj, prop) {
   }
   return obj;
 }
-// Crea un oggetto 'person' con tre proprietà: 'name', 'age', e 'job'
 let film = {
   name: "Titanic",
   year: 1980,
@@ -477,25 +476,54 @@ console.log("La somma degli anni dei vari film e': ", sumAllTheYears(movies));
 function searchByTitle(stringa) {
   let movieWithString = [];
   for (let i = 0; i < movies.length; i++) {
-    // Utilizz to lowercase per rendere imparziale il confronto , se tutto e' piccolo o Uppercase andiamo a vedere se effettivamente quella stringa c e anche se non hanno maiuscole e minuscole = .
+    // Utilizzo to lowercase per rendere imparziale il confronto , se tutto e' piccolo o Uppercase andiamo a vedere se effettivamente quella stringa c e anche se non hanno maiuscole e minuscole = .
     if (movies[i].Title.toLowerCase().includes(stringa.toLowerCase())) {
       movieWithString.push(movies[i]);
     }
   }
   return movieWithString;
 }
-console.log("i film contententi la stringa sono : ", searchByTitle("Lord"));
+console.log("i film contententi la stringa sono : ", searchByTitle("ring"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+function searchAndDivide(stringa) {
+  let newSearch = {
+    match: [],
+    unmatch: [],
+  };
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Title.toLowerCase().includes(stringa.toLowerCase())) {
+      match.push(movies[i]);
+    } else {
+      unmatch.push(movies[i]);
+    }
+    return newSearch;
+  }
+}
+let newSearch = searchAndDivide("ring");
+console.log("i film contententi la stringa sono : ", searchAndDivide("lord"));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
+function removeIndex(array, index) {
+  if (index < 0 || index >= array.length) {
+    // Se l'indice è fuori dai limiti, restituisci l'array originale (senza modifiche)
+    return array;
+  } else {
+    // Restituisci l'array con l'elemento all'indice specificato rimosso
+    return array.filter((_, i) => i !== index);
+  }
+}
+// Rimuovo l'elemento all'indice 3
+let arrayModificato = removeIndex(movies, 3);
+
+console.log("Array modificato:", arrayModificato);
+// DOM
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
