@@ -617,6 +617,19 @@ addClassToRig();
 
 */
 
+function halfTree(height) {
+  for (let i = 1; i <= height; i++) {
+    let line = "";
+    for (let j = 0; j < i; j++) {
+      line += "*";
+    }
+    // Stampa la riga corrente
+    console.log(line);
+  }
+}
+// Esempi di utilizzo della funzione halfTree
+halfTree(3);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -628,6 +641,22 @@ addClassToRig();
   *****
 
 */
+console.log(" l alberello centrato");
+function tree(height) {
+  for (let i = 1; i <= height; i++) {
+    let line = "";
+    for (let j = 0; j < height - i; j++) {
+      line += " ";
+    }
+    for (let k = 0; k < 2 * i - 1; k++) {
+      line += "*";
+    }
+    console.log(line);
+  }
+}
+
+// Esempio di utilizzo della funzione tree con altezza 3
+tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
