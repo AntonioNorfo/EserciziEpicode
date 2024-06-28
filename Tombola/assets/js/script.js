@@ -11,7 +11,7 @@ const createTable = () => {
   }
 };
 
-const extractNumber = () => {
+const extractNumber = (e) => {
   if (extractedNumbers.length >= 76) {
     alert("Tutti i numeri sono stati estratti!");
     return;
@@ -23,7 +23,9 @@ const extractNumber = () => {
 
   extractedNumbers.push(newNumber);
   document.getElementById("extractedNumber").innerText = newNumber;
+
   colorCell(newNumber);
+  console.log(e);
 };
 
 document.getElementById("extractButton").addEventListener("click", extractNumber);
@@ -32,7 +34,6 @@ createTable();
 
 function colorCell(number) {
   const cells = document.querySelectorAll(".casellaTable");
-  console.log(cells);
   cells.forEach((cell) => {
     if (cell.innerText == number) {
       cell.classList.add("cellColor");
